@@ -16,16 +16,18 @@ import static org.mockito.Mockito.when;
 public class TestCalculator {
 
     Calculator c;
+
+
+
+    //声明搭配mockito使用Junit, 不然@mock会出错
+    @Rule public MockitoRule rule = MockitoJUnit.rule();
+
     //Mock 一个service
     //CalculatorService service = Mockito.mock(CalculatorService.class)；
 
     //替代方法
     @Mock
     CalculatorService service;
-
-    //声明搭配mockito使用Junit, 不然@mock会出错
-    @Rule public MockitoRule rule = MockitoJUnit.rule();
-
 
     //测试之前做的事情
     @Before
